@@ -78,9 +78,12 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
 
           //get the GIF itself
           var myGIF = response.data[i].images.fixed_height_still.url;
+         
 
           //display the static GIF
-          individualDessert.prepend("<img src ='" +myGIF+"'>");
+          individualDessert.prepend("<img src ='" +myGIF+"' class = 'gif' data-state = 'still' data-animate ='"+response.data[i].images.fixed_height.url+ "' data-still = '"+ myGIF+"'>");
+
+          
 
           //put the individual dessert into the bigger block div for that particular dessert
           dessertDivBlock.append(individualDessert);
@@ -92,6 +95,55 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
         });
 
     }
+
+    //  $(".gif").on("click", function() {
+    //   	console.log("gif clicked");
+    // //   	var myGIFStill = response.data[i].images.fixed_height_still.url;
+    // //   	var myGIFAnimated = response.data[i].images.fixed_height.url;
+
+    // //   	var state = $(this).attr("data-state");
+    // //   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+    // //   // Then, set the image's data-state to animate
+    // //   // Else set src to the data-still value
+    // //   if (state === "still") {
+    // //     $(this).attr("src", myGIFAnimated);
+    // //     $(this).attr("data-state", "animate");
+    // //   } else {
+    // //     $(this).attr("src", myGIFStill);
+    // //     $(this).attr("data-state", "still");
+    // // }
+
+    //   });
+
+
+//a function to animate or pause GIFs 
+    function animateGIFS () {
+    	  	console.log("gif clicked");
+   
+    	var state = $(this).attr("data-state");
+      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+      // Then, set the image's data-state to animate
+      // Else set src to the data-still value
+      if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    }
+
+     // function testFunct () {
+     // 	console.log("heres the function");
+
+
+     // }
+
+
+//note - for some reason the on click function to animate would only work when I wrote it with this syntax specifically - like, calling another
+//function on click. It wouldn't work if I wrote it the way I wrote on click functions for the submit button. I have no idea why
+     $(document).on("click", ".gif", animateGIFS);
+
 
     // making a new button when the user enters text in the text box and clicks submit
       $("#dessertSubmit").on("click", function(event) {
@@ -113,6 +165,7 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
       $(document).on("click", ".dessert", displayDessertInfo);
 
       
+     
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
