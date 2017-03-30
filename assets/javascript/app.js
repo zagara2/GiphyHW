@@ -81,7 +81,7 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
          
 
           //display the static GIF
-          individualDessert.prepend("<img src ='" +myGIF+"' class = 'gif' data-state = 'still' data-animate ='"+response.data[i].images.fixed_height.url+ "' data-still = '"+ myGIF+"'>");
+          individualDessert.prepend("<img src ='" +myGIF+"' class = 'gif' data-state = 'still' data-animate ='"+response.data[i].images.fixed_height.url+ "' data-still = '"+ myGIF+"' alt = 'dessert gif'>");
 
           
 
@@ -141,7 +141,7 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
 
 
 //note - for some reason the on click function to animate would only work when I wrote it with this syntax specifically - like, calling another
-//function on click. It wouldn't work if I wrote it the way I wrote on click functions for the submit button. I have no idea why
+//function on click. It wouldn't work if I wrote it the way I wrote the on click function for the submit button. I have no idea why
      $(document).on("click", ".gif", animateGIFS);
 
 
