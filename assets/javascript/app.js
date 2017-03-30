@@ -50,7 +50,7 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
 
         var myDessert = $(this).attr("data-name");
         
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + myDessert +"&api_key=dc6zaTOxFJmzC&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + myDessert +"&api_key=dc6zaTOxFJmzC&limit=10";
 
         // Creating an AJAX call for the specific dessert button being clicked
         $.ajax({
@@ -96,24 +96,6 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
 
     }
 
-    //  $(".gif").on("click", function() {
-    //   	console.log("gif clicked");
-    // //   	var myGIFStill = response.data[i].images.fixed_height_still.url;
-    // //   	var myGIFAnimated = response.data[i].images.fixed_height.url;
-
-    // //   	var state = $(this).attr("data-state");
-    // //   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-    // //   // Then, set the image's data-state to animate
-    // //   // Else set src to the data-still value
-    // //   if (state === "still") {
-    // //     $(this).attr("src", myGIFAnimated);
-    // //     $(this).attr("data-state", "animate");
-    // //   } else {
-    // //     $(this).attr("src", myGIFStill);
-    // //     $(this).attr("data-state", "still");
-    // // }
-
-    //   });
 
 
 //a function to animate or pause GIFs 
