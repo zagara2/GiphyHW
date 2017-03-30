@@ -19,6 +19,8 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+$("#dessertPicsHere").hide();
+
  // Your app should take the topics in this array and create buttons in your HTML.
 //Try using a loop that appends a button for each string in the array.
       function renderButtons() {
@@ -47,6 +49,7 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
 
 // displayDessertInfo function re-renders the HTML to display the appropriate content
       function displayDessertInfo() {
+      	$("#dessertPicsHere").show();
 
         var myDessert = $(this).attr("data-name");
         

@@ -161,6 +161,19 @@ html {
 .individualDessert {
 	display: inline-block;
 	float:left;
-	margin:10px;
+	margin:20px;
+	color: #f392bc;
+	font-family: 'Patrick Hand SC', cursive;
+	/*font-weight: bold;*/
+	font-size:24px;
+	/*text-shadow: -1px 0 #fcedb8, 0 1px #fcedb8, 1px 0 #fcedb8, 0 -1px #fcedb8;*/
+	text-shadow: -1px 0 #f6c0da, 0 1px #f6c0da, 1px 0 #f6c0da, 0 -1px #f6c0da
+	
+}
+
+.gif {
+	border-width: 2px;
+    border-style: solid;
+    border-color: #f392bc;
 
 }
