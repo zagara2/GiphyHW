@@ -257,6 +257,7 @@ html {
 		margin-left: 4%;
     margin-right: 4%;
     width:auto;
+    margin-bottom:20px;
     
 	}
 
@@ -275,6 +276,11 @@ html {
 
 	#bigTitle {
 		font-size:50px;
+	}
+
+	.gif {
+		
+		max-width:200px;
 	}
 
 }
