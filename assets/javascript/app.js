@@ -1,5 +1,7 @@
-var topics = ["chocolate cake", "angel food cake", "tiramisu", "root beer float", "ice cream", "smores", "caramel apple", "cookie", "macaroon", "popsicle", "waffle", "doughnut", "french toast", "chocolate cheesecake", "crepes", "brownies", "cupcake", "latte", "pancakes", "smoothie", "giga pudding", "pie"];
+var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies", "strawberry", "macaroon", "popsicle", "waffle", "doughnut", "french toast", "cheesecake", "crepes", "brownies", "cupcake", "cappuccino", "pancakes", "smoothie", "giga pudding", "pie", "pop tarts", "oreo", "root beer float", "soda", "candy corn"];
 
+//probs gonna want to resize the pics to a standard size
+//I think I need to have my gifs start animated then pause on click... otherwise they look wacky?
 
 // Your app should take the topics in this array and create buttons in your HTML.
 //Try using a loop that appends a button for each string in the array.
@@ -75,10 +77,10 @@ var topics = ["chocolate cake", "angel food cake", "tiramisu", "root beer float"
           individualDessert.append(ratingText);
 
           //get the GIF itself
-          var myGIF = response.data[i].images.original_still.url;
+          var myGIF = response.data[i].images.fixed_height_still.url;
 
           //display the static GIF
-          individualDessert.prepend(myGIF);
+          individualDessert.prepend("<img src ='" +myGIF+"'>");
 
           //put the individual dessert into the bigger block div for that particular dessert
           dessertDivBlock.append(individualDessert);
@@ -102,11 +104,15 @@ var topics = ["chocolate cake", "angel food cake", "tiramisu", "root beer float"
 
         // Calling renderButtons which handles the processing of our dessert array
         renderButtons();
+        // Clear the textbox when done
+      $("#dessert-input").val("");
       });
 
     // Adding a click event listener to all elements with a class of "dessert" (the buttons)
     //this makes it so that when a dessert button is clicked, gifs get displayed because displayDessertInfo runs
       $(document).on("click", ".dessert", displayDessertInfo);
+
+      
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
