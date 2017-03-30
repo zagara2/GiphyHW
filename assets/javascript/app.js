@@ -49,10 +49,10 @@ var topics = ["chocolate cake", "ice cream", "smores", "caramel apple", "cookies
       function displayDessertInfo() {
 
         var myDessert = $(this).attr("data-name");
-        // var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&r=json";
+        
         var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + myDessert +"&api_key=dc6zaTOxFJmzC&limit=10";
 
-        // Creating an AJAX call for the specific movie button being clicked
+        // Creating an AJAX call for the specific dessert button being clicked
         $.ajax({
           url: queryURL,
           method: "GET"
