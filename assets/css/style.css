@@ -6,10 +6,10 @@ html {
     background-color: white;
     margin-left: 9%;
     margin-right: 9%;
-    border-width: 3px;
-    border-style: dotted;
+    border-width: 5px;
+    border-style: outset;
     border-color: #f392bc;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 #bigTitle {
@@ -53,7 +53,7 @@ html {
     margin-left: 4%;
     margin-right: 4%;
     border-width: 3px;
-    border-style: dotted;
+    border-style: outset;
     border-color: #f392bc;
     padding-left: 8px;
     padding-right: 8px;
@@ -82,13 +82,14 @@ html {
 	margin-right:9%;*/
 	text-align: center;
 	border-width: 3px;
-    border-style: dotted;
+    border-style: outset;
     border-color: #f392bc;
     float:right;
     display:inline-block;
     width:20%;
     margin-right:4%;
     padding-top:12px;
+
 
 
 
@@ -100,8 +101,42 @@ html {
 	font-weight: bold;
 	font-size:22px;
 	padding-bottom: 12px;
+	text-shadow: -1px 0 #fcedb8, 0 1px #fcedb8, 1px 0 #fcedb8, 0 -1px #fcedb8;
+	margin-left:5px;
+	margin-right:5px;
 
+}
 
+#dessert-input {
+	border-color:#f392bc;
+	width:50%;
+}
+
+#dessertSubmit {
+
+	margin-top: 8px;
+    /*background-color:#fcedb8;*/
+    /*background-color: #e65289;*/
+    background-color: #f392bc;
+    color: #fcedb8;
+    font-family: 'Patrick Hand SC', cursive;
+    padding: 5px;
+    padding-left:5%;
+    padding-right:5%;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+#instructions2 {
+	padding-left:9px;
+	padding-right:9px;
+	color: skyblue;
+	font-family: 'Patrick Hand SC', cursive;
+	font-weight: bold;
+	font-size:18px;
+	text-shadow: -1px 0 #fcedb8, 0 1px #fcedb8, 1px 0 #fcedb8, 0 -1px #fcedb8;
 }
 
 #dessertPicsHere{
@@ -112,7 +147,7 @@ html {
     float-left;
     display:inline-block;
     border-width: 3px;
-    border-style: dotted;
+    border-style: outset;
     border-color: #f392bc;
 
 }
