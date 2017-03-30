@@ -10,6 +10,7 @@ html {
     border-style: outset;
     border-color: #f392bc;
     margin-top: 25px;
+    padding-bottom:10px;
 }
 
 #bigTitle {
@@ -57,6 +58,8 @@ html {
     border-color: #f392bc;
     padding-left: 8px;
     padding-right: 8px;
+    /*margin-top:10px;
+    margin-bottom:10px;*/
 }
 
 #dessertButtons button {
@@ -70,6 +73,7 @@ html {
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
+    
     
    /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
 }
@@ -161,7 +165,10 @@ html {
 .individualDessert {
 	display: inline-block;
 	float:left;
-	margin:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:4px;
+	margin-right:4px;
 	color: #f392bc;
 	font-family: 'Patrick Hand SC', cursive;
 	/*font-weight: bold;*/
@@ -175,5 +182,33 @@ html {
 	border-width: 2px;
     border-style: solid;
     border-color: #f392bc;
+
+}
+
+#placeholder {
+	background-color: white;
+	/*font-family: 'Alfa Slab One', cursive;*/
+	/*font-family: 'Mrs Sheppards', cursive;*/
+	font-family: 'Patrick Hand SC', cursive;
+	font-weight:bold;
+    text-align: center;
+    font-size: 90px;
+    /*color: #f392bc;*/
+    color:skyblue;
+    /*text-shadow: -2px 0 #f6c0da, 0 2px #f6c0da, 2px 0 #f6c0da, 0 -2px #f6c0da;*/
+    text-shadow: -2px 0 #fcedb8, 0 2px #fcedb8, 2px 0 #fcedb8, 0 -2px #fcedb8;
+    margin-bottom:20px;
+	margin-left: 4%;
+    width:70%;
+    height:250px;
+    float-left;
+    display:inline-block;
+    border-width: 3px;
+    border-style: outset;
+    border-color: #f392bc;
+    padding-top:10%;
+    padding-bottom:15px;
+    padding-left:2%;
+    padding-right:2%;
 
 }
