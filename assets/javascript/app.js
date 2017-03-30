@@ -58,12 +58,12 @@ var topics = ["chocolate cake", "angel food cake", "tiramisu", "root beer float"
 
         	var mainArray = response.data;
         	// Creating a div to hold the block of 10 gifs for a particular dessert
-          var dessertDivBlock = $("<div class='dessertStuff' id = "+myDessert+ ">");
+          var dessertDivBlock = $("<div class='dessertStuff' id = '"+myDessert+ "'>");
 
         	//loop through every gif in the response
         	for (i=0; i<mainArray.length; i++) {   
 
-          var individualDessert = $("<div class = 'individualDessert'>");
+          var individualDessert = $("<div class = 'individualDessert' id ='"+ myDessert+ "'>");
 
           // Storing the rating data
           var rating = response.data[i].rating;
@@ -74,7 +74,13 @@ var topics = ["chocolate cake", "angel food cake", "tiramisu", "root beer float"
           // Displaying the rating
           individualDessert.append(ratingText);
 
-          //put the individual dessert into the bigger div for that particular dessert
+          //get the GIF itself
+          var myGIF = response.data[i].images.original_still.url;
+
+          //display the static GIF
+          individualDessert.prepend(myGIF);
+
+          //put the individual dessert into the bigger block div for that particular dessert
           dessertDivBlock.append(individualDessert);
       }
 
@@ -84,3 +90,25 @@ var topics = ["chocolate cake", "angel food cake", "tiramisu", "root beer float"
         });
 
     }
+
+    // making a new button when the user enters text in the text box and clicks submit
+      $("#dessertSubmit").on("click", function(event) {
+        event.preventDefault();
+        // This line grabs the input from the textbox
+        var dessert = $("#dessert-input").val().trim();
+
+        // Adding dessert from the textbox to our array
+        topics.push(dessert);
+
+        // Calling renderButtons which handles the processing of our dessert array
+        renderButtons();
+      });
+
+    // Adding a click event listener to all elements with a class of "dessert" (the buttons)
+    //this makes it so that when a dessert button is clicked, gifs get displayed because displayDessertInfo runs
+      $(document).on("click", ".dessert", displayDessertInfo);
+
+      // Calling the renderButtons function to display the intial buttons
+      renderButtons();
+
+
