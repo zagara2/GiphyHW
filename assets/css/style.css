@@ -86,9 +86,10 @@ html {
     border-color: #f392bc;
     float:right;
     display:inline-block;
-    width:20%;
+    width:15%;
     margin-right:4%;
     padding-top:12px;
+   /* margin-left:6px;*/
 
 
 
@@ -104,6 +105,7 @@ html {
 	text-shadow: -1px 0 #fcedb8, 0 1px #fcedb8, 1px 0 #fcedb8, 0 -1px #fcedb8;
 	margin-left:5px;
 	margin-right:5px;
+	margin-bottom:6px;
 
 }
 
@@ -149,5 +151,16 @@ html {
     border-width: 3px;
     border-style: outset;
     border-color: #f392bc;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:2%;
+    padding-right:2%;
+
+}
+
+.individualDessert {
+	display: inline-block;
+	float:left;
+	margin:10px;
 
 }
