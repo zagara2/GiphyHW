@@ -31,7 +31,7 @@ When the page is loaded properly, it should look like this:
 
 ![Homepage](/assets/images/justdesserts.JPG)
 
- (the rest of the page is visible if one keeps scrolling)
+(top half; the rest of the page is visible if one keeps scrolling.)
 
 ## Future Plans for Improvement
 
