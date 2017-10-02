@@ -29,9 +29,11 @@ The site is best viewed on a small to moderately large desktop (between 1280x102
 
 When the page is loaded properly, it should look like this:
 
-![Homepage](/assets/images/justdesserts.JPG)
+![Start Screen](/assets/images/startscreen.JPG)
+**Start Screen**
 
-(top half; the rest of the page is visible if one keeps scrolling.)
+![Homepag after GIF button pressed](/assets/images/justdesserts.JPG)
+**Screen after a GIF button has been pressed (top half; the rest of the page is visible if one keeps scrolling.)**
 
 ## Future Plans for Improvement
 
