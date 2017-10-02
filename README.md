@@ -31,6 +31,8 @@ When the page is loaded properly, it should look like this:
 
 ![Homepage](/assets/images/justdesserts.JPG)
 
+ (the rest of the page is visible if one keeps scrolling)
+
 ## Future Plans for Improvement
 
 * Make GIFs display more towards the center of their designated div on mobile.
